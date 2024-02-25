@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapLink - Social Media App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFA500; /* Pure, rich, shiny orange */
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            margin: 0; /* Remove default margin */
+            flex-direction: column; /* Align items in a column */
+        }
+        .container {
+            text-align: center;
+        }
+        .logo {
+            max-width: 200px;
+            opacity: 0; /* Initially hide the logo */
+            animation: fadeIn 2s ease forwards; /* Fade in animation */
+        }
+        .slogan {
+            color: white; /* White text color */
+            font-family: cursive; /* Cursive font style */
+            font-size: 24px; /* Adjust font size */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo" id="logo">
+        <div class="slogan">JOIN THE BUZZ</div>
+    </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById('logo').style.display = 'none'; // Hide the logo
+            document.querySelector('.slogan').style.display = 'none'; // Hide the slogan
+            document.body.innerHTML += `<a href="signup.html" class="btn btn-primary">Sign Up</a>
+                                         <a href="login.html" class="btn btn-secondary">Login</a>`; // Add signup/login buttons
+        }, 3000); // 3000 milliseconds (3 seconds) delay
+    </script>
+</body>
+</html>
